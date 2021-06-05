@@ -251,6 +251,18 @@
 	var/bulb_vacuum_colour = "#4F82FF"	// colour of the light when air alarm is set to severe
 	var/bulb_vacuum_brightness = 8
 
+/obj/machinery/light/Initialize(mapload)
+	. = ..()
+	switch(dir)
+		if(NORTH)
+			pixel_y = 10
+		if(SOUTH)
+			pixel_y = -10
+		if(EAST)
+			pixel_x = 10
+		if(WEST)
+			pixel_x = -10
+
 /obj/machinery/light/broken
 	status = LIGHT_BROKEN
 	icon_state = "tube-broken"

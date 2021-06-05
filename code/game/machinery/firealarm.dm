@@ -58,6 +58,16 @@
 	update_icon()
 	myarea = get_area(src)
 	LAZYADD(myarea.firealarms, src)
+	switch(src.dir)
+		if(NORTH)
+			pixel_y = 22
+		if(SOUTH)
+			pixel_y = -22
+		if(EAST)
+			pixel_x = 22
+		if(WEST)
+			pixel_x = -22
+
 
 /obj/machinery/firealarm/Destroy()
 	LAZYREMOVE(myarea.firealarms, src)
