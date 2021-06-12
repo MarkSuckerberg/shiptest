@@ -28,13 +28,6 @@
 
 	var/list/dent_decals
 
-/turf/closed/wall/low
-	name = "low wall"
-	desc = "A short chunk of metal used to separate rooms."
-	icon = 'icons/turf/walls/low-wall.dmi'
-	opacity = FALSE
-	CanAtmosPass = TRUE
-
 /turf/closed/wall/Initialize(mapload)
 	. = ..()
 	if(is_station_level(z))

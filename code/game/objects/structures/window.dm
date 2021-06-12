@@ -657,9 +657,10 @@
 /obj/structure/window/shuttle
 	name = "shuttle window"
 	desc = "A reinforced, air-locked pod window."
-	icon = 'whitesands/icons/obj/smooth_structures/shuttle_window.dmi'
-	icon_state = "shuttle_window-0"
-	base_icon_state = "shuttle_window"
+	icon = 'icons/obj/smooth_structures/window.dmi'
+	icon_state = "window-0"
+	base_icon_state = "window"
+	color = "#ffffff"
 	max_integrity = 150
 	wtype = "shuttle"
 	fulltile = TRUE
@@ -669,7 +670,7 @@
 	armor = list("melee" = 90, "bullet" = 0, "laser" = 0, "energy" = 0, "bomb" = 50, "bio" = 100, "rad" = 100, "fire" = 80, "acid" = 100)
 	smoothing_flags = SMOOTH_BITMASK
 	smoothing_groups = list(SMOOTH_GROUP_SHUTTLE_PARTS, SMOOTH_GROUP_WINDOW_FULLTILE_SHUTTLE)
-	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE_SHUTTLE)
+	canSmoothWith = list(SMOOTH_GROUP_WINDOW_FULLTILE_SHUTTLE, SMOOTH_GROUP_WALLS)
 	explosion_block = 3
 	glass_type = /obj/item/stack/sheet/titaniumglass
 	glass_amount = 2

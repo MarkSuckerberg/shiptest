@@ -160,7 +160,7 @@ again.
 /obj/effect/spawner/structure/window/shuttle
 	name = "shuttle window spawner"
 	icon_state = "swindow_spawner"
-	spawn_list = list(/obj/structure/grille, /obj/structure/window/shuttle)
+	spawn_list = list(/obj/structure/table/low_wall, /obj/structure/window/shuttle)
 
 
 //plastitanium window
