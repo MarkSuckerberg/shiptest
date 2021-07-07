@@ -500,6 +500,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
+/obj/machinery/holopad/emergency/command,
 /turf/open/floor/wood,
 /area/ship/crew/solgov)
 "gQ" = (
@@ -508,6 +509,10 @@
 	},
 /turf/open/floor/plating,
 /area/ship/external)
+"gR" = (
+/obj/structure/sign/poster/retro/nanotrasen_logo_70s,
+/turf/closed/wall/r_wall,
+/area/ship/bridge)
 "gW" = (
 /obj/machinery/atmospherics/components/unary/vent_pump/on/layer2,
 /turf/open/floor/wood,
@@ -2024,9 +2029,6 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "AY" = (
-/obj/structure/sign/nanotrasen{
-	pixel_y = 32
-	},
 /obj/item/kirbyplants/random,
 /turf/open/floor/wood,
 /area/ship/crew/solgov)
@@ -2132,9 +2134,6 @@
 /turf/open/floor/plasteel,
 /area/ship/cargo)
 "CY" = (
-/obj/structure/sign/nanotrasen{
-	pixel_y = 32
-	},
 /obj/machinery/photocopier,
 /turf/open/floor/plasteel/grimy,
 /area/ship/crew/solgov)
@@ -4468,7 +4467,7 @@ mY
 ry
 vq
 AK
-cP
+gR
 AY
 SW
 Go
@@ -4530,7 +4529,7 @@ pU
 td
 xu
 AW
-cP
+gR
 CY
 Ew
 KP
