@@ -333,7 +333,7 @@
 /obj/machinery/atmospherics/components/unary/vent_pump/siphon/atmos/toxin_output{
 	dir = 1
 	},
-/turf/open/floor/engine/air,
+/turf/open/floor/engine/plasma,
 /area/ship/engineering/atmospherics)
 "ee" = (
 /obj/machinery/light_switch{
@@ -865,6 +865,10 @@
 /obj/structure/closet/crate,
 /turf/open/floor/plasteel,
 /area/ship/engineering/engine)
+"ma" = (
+/obj/effect/landmark/observer_start,
+/turf/open/floor/carpet/nanoweave,
+/area/ship/hallway/central)
 "mk" = (
 /obj/effect/turf_decal/lumos/tile/blue/fulltile,
 /obj/machinery/atmospherics/components/unary/vent_scrubber/on/layer4{
@@ -1428,7 +1432,7 @@
 /obj/machinery/atmospherics/components/unary/outlet_injector/atmos/toxin_input{
 	dir = 1
 	},
-/turf/open/floor/engine/air,
+/turf/open/floor/engine/plasma,
 /area/ship/engineering/atmospherics)
 "sP" = (
 /obj/effect/turf_decal/tile/blue{
@@ -2098,7 +2102,7 @@
 /area/ship/hallway/central)
 "Cz" = (
 /obj/machinery/air_sensor/atmos/toxin_tank,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine/plasma,
 /area/ship/engineering/atmospherics)
 "CA" = (
 /obj/machinery/atmospherics/pipe/simple/green/visible,
@@ -2436,7 +2440,7 @@
 /area/ship/crew/solgov)
 "Gq" = (
 /obj/effect/turf_decal/atmos/plasma,
-/turf/open/floor/engine/air,
+/turf/open/floor/engine/plasma,
 /area/ship/engineering/atmospherics)
 "GB" = (
 /obj/effect/mapping_helpers/simple_pipes/supply/hidden/layer2,
@@ -4151,7 +4155,7 @@ wz
 gi
 YI
 wz
-wz
+ma
 wz
 wz
 QG
