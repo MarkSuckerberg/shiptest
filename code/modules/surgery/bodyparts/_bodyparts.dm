@@ -52,6 +52,7 @@
 	var/skin_tone = ""
 	var/body_gender = ""
 	var/species_id = ""
+	var/species_override_icon
 	var/should_draw_gender = FALSE
 	var/should_draw_greyscale = FALSE
 	var/species_color = ""
@@ -508,6 +509,9 @@
 		else
 			skin_tone = ""
 
+		if(S.limbs_icon)
+			species_override_icon = S.limbs_icon
+
 		body_gender = H.gender
 		should_draw_gender = S.sexes
 
@@ -593,20 +597,13 @@
 		should_draw_gender = FALSE
 
 	if(status == BODYPART_ORGANIC || (status == BODYPART_ROBOTIC && render_like_organic == TRUE)) // So IPC augments can be colorful without disrupting normal BODYPART_ROBOTIC render code.
-		if(should_draw_greyscale)
-			limb.icon = 'icons/mob/human_parts_greyscale.dmi'
-			if(should_draw_gender)
-				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
-			else if(use_digitigrade)
-				limb.icon_state = "digitigrade_[use_digitigrade]_[body_zone]"
-			else
-				limb.icon_state = "[species_id]_[body_zone]"
+		limb.icon = species_override_icon ? species_override_icon : should_draw_greyscale ? 'icons/mob/human_parts_greyscale.dmi' : 'icons/mob/human_parts.dmi'
+		if(should_draw_gender)
+			limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
+		else if(use_digitigrade)
+			limb.icon_state = "digitigrade_[use_digitigrade]_[body_zone]"
 		else
-			limb.icon = 'icons/mob/human_parts.dmi'
-			if(should_draw_gender)
-				limb.icon_state = "[species_id]_[body_zone]_[icon_gender]"
-			else
-				limb.icon_state = "[species_id]_[body_zone]"
+			limb.icon_state = "[species_id]_[body_zone]"
 		if(aux_zone)
 			aux = image(limb.icon, "[species_id]_[aux_zone]", -aux_layer, image_dir)
 			. += aux

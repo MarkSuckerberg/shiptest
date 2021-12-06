@@ -142,10 +142,7 @@
 		else
 			limb.species_color = random_short_color()
 
-		limb.icon = 'icons/mob/human_parts_greyscale.dmi'
 		limb.should_draw_greyscale = TRUE
-	else
-		limb.icon = 'icons/mob/human_parts.dmi'
 	// Set this limb up using the species name and body zone
 	limb.icon_state = "[selected_category]_[limb.body_zone]"
 	limb.name = "\improper biosynthetic [selected_category] [parse_zone(limb.body_zone)]"

@@ -14,6 +14,8 @@ GLOBAL_LIST_EMPTY(roundstart_races)
 	var/id
 	//This is used if you want to use a different species' limb sprites.
 	var/limbs_id
+	///This is used if your species' limb sprites are in a different icon file.
+	var/limbs_icon
 	///This is the fluff name. They are displayed on health analyzers and in the character setup menu. Leave them generic for other servers to customize.
 	var/name
 	// Default color. If mutant colors are disabled, this is the color that will be used by that race.
