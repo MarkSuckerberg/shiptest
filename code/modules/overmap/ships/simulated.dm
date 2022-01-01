@@ -260,6 +260,7 @@
 					S.shuttle.shuttle_areas |= shuttle.shuttle_areas
 				forceMove(docking_target)
 				state = OVERMAP_SHIP_IDLE
+				SEND_SIGNAL(src, COMSIG_OVERMAP_DOCK_LOCATION, to_dock)
 			else
 				addtimer(CALLBACK(src, .proc/complete_dock, to_dock), 1 SECONDS) //This should never happen, yet it does sometimes.
 		if(OVERMAP_SHIP_UNDOCKING)

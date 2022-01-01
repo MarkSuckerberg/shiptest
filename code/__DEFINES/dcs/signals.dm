@@ -656,3 +656,6 @@
 #define COMSIG_XENO_TURF_CLICK_SHIFT "xeno_turf_click_shift" //from turf ShiftClickOn(): (/mob)
 #define COMSIG_XENO_TURF_CLICK_CTRL "xeno_turf_click_alt" //from turf AltClickOn(): (/mob)
 #define COMSIG_XENO_MONKEY_CLICK_CTRL "xeno_monkey_click_ctrl" //from monkey CtrlClickOn(): (/mob)
+
+//Overmap signals
+#define COMSIG_OVERMAP_DOCK_LOCATION "overmap_dock_location" //from obj/structure/overmap/ship/simulated/proc/complete_dock(obj/structure/overmap/to_dock): (/obj/structure/overmap)
