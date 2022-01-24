@@ -1,5 +1,6 @@
-import { Flex, Section, Tabs } from "../components";
-import { ButtonConfirm, ButtonInput } from "../components/Button";
+import { Flex, Section, Table, Tabs } from "../components";
+import { ButtonConfirm } from "../components/Button";
+import { useBackend, useLocalState } from "../backend";
 
 const MessageModal = (props, context) => {
   const { data } = useBackend(context);
@@ -69,9 +70,22 @@ const TabMessages = (props, context) => {
 
   return (
     <Section title="Messages">
+      <Table>
+        <Table.Row header>
+          <Table.Cell>From</Table.Cell>
+          <Table.Cell>Message</Table.Cell>
+          <Table.Cell>Timestamp</Table.Cell>
+          <Table.Cell>Type</Table.Cell>
+        </Table.Row>
       {messages.map(message => (
-        
-      )}
+        <Table.Row key={message.id}>
+          <Table.Cell>{message.sender} ({message.location})</Table.Cell>
+          <Table.Cell>{message.content}</Table.Cell>
+          <Table.Cell>{message.timestamp}</Table.Cell>
+          <Table.Cell>{message.type}</Table.Cell>
+        </Table.Row>
+      ))}
+      </Table>
     </Section>
   )
 }
@@ -147,8 +161,13 @@ export const ShipCommunicationsConsole = (props, context) => {
             selected={tab === 1}
             onClick={() => setTab(1)}>
           </Tabs.Tab>
+          <Tabs.Tab
+            selected={tab === 2}
+            onClick={() => setTab(2)}>
+          </Tabs.Tab>
         </Tabs>
         {tab === 1 && <TabMain />}
+        {tab === 2 && <TabMessages />}
       </Window.Content>
     </Window>
   );

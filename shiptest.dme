@@ -2634,6 +2634,7 @@ g// DM Environment file for shiptest.dme.
 #include "code\modules\overmap\helm.dm"
 #include "code\modules\overmap\ship_bounty.dm"
 #include "code\modules\overmap\ships\_ships.dm"
+#include "code\modules\overmap\ships\ship_communications_console.dm"
 #include "code\modules\overmap\ships\simulated.dm"
 #include "code\modules\overmap\ships\simulated_ship_data.dm"
 #include "code\modules\paperwork\carbonpaper.dm"
