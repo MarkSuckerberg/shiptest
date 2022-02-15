@@ -175,7 +175,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/crew)
 "eJ" = (
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer4{
 	dir = 6
 	},
@@ -1651,7 +1651,7 @@
 /turf/closed/wall/mineral/titanium/nodiagonal,
 /area/ship/storage)
 "Po" = (
-/obj/machinery/holopad/emergency/medical,
+/obj/machinery/holopad,
 /turf/open/floor/plasteel/showroomfloor,
 /area/ship/medical)
 "Pp" = (

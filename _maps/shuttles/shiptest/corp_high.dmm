@@ -1757,7 +1757,7 @@
 	},
 /area/ship/external)
 "AJ" = (
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /turf/open/floor/carpet,
 /area/ship/bridge)
 "AO" = (

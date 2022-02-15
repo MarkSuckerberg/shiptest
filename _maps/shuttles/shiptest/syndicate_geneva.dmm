@@ -638,7 +638,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 6
 	},
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /turf/open/floor/carpet/nanoweave/red,
 /area/ship/bridge)
 "mz" = (
@@ -1614,7 +1614,7 @@
 /obj/machinery/atmospherics/pipe/simple/scrubbers/hidden/layer2{
 	dir = 9
 	},
-/obj/machinery/holopad/emergency/medical,
+/obj/machinery/holopad,
 /turf/open/floor/plasteel/white,
 /area/ship/medical/surgery)
 "DH" = (

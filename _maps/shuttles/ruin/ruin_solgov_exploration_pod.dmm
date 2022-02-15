@@ -70,7 +70,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /turf/open/floor/mineral/titanium/yellow,
 /area/ship/bridge)
 "E" = (

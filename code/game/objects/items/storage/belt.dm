@@ -157,7 +157,6 @@
 		/obj/item/flashlight/pen,
 		/obj/item/extinguisher/mini,
 		/obj/item/reagent_containers/hypospray,
-		/obj/item/hypospray,
 		/obj/item/sensor_device,
 		/obj/item/radio,
 		/obj/item/clothing/gloves/,

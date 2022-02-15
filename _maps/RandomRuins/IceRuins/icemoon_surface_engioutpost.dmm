@@ -484,7 +484,7 @@
 	icon_state = "4-8"
 	},
 /obj/effect/turf_decal/corner/red/diagonal,
-/obj/machinery/holopad/emergency/engineering,
+/obj/machinery/holopad,
 /turf/open/floor/plasteel/white,
 /area/icemoon/surface/outdoors)
 "bo" = (

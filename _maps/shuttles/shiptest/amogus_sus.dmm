@@ -325,7 +325,7 @@
 /turf/open/floor/plasteel/dark,
 /area/ship/hallway/fore)
 "ea" = (
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /turf/open/floor/plasteel/dark,
 /area/ship/bridge)
 "ec" = (

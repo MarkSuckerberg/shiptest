@@ -1383,7 +1383,7 @@
 "XV" = (
 /obj/machinery/atmospherics/pipe/simple/supply/hidden,
 /obj/effect/decal/cleanable/dirt/dust,
-/obj/machinery/holopad/emergency/command{
+/obj/machinery/holopad{
 	pixel_y = 16
 	},
 /turf/open/floor/plasteel/cult,

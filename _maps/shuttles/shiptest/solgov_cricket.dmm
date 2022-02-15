@@ -1738,7 +1738,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /obj/effect/landmark/start/captain,
 /turf/open/floor/carpet/nanoweave/blue,
 /area/ship/bridge)

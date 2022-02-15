@@ -1486,7 +1486,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /turf/open/floor/plasteel/dark/airless,
 /area/ship/bridge)
 "XI" = (

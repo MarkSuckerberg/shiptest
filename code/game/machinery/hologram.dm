@@ -323,6 +323,7 @@ Possible to do for anyone motivated enough:
 		if("hang_up")
 			if(outgoing_call)
 				outgoing_call.Disconnect(src)
+				return TRUE
 
 /**
   * hangup_all_calls: Disconnects all current holocalls from the holopad
@@ -473,8 +474,7 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 	if(istype(AI) && AI.current == src)
 		AI.current = null
 	LAZYREMOVE(masters, user) // Discard AI from the list of those who use holopad
-	if(user in holorays)
-		QDEL_NULL(holorays[user])
+	qdel(holorays[user])
 	LAZYREMOVE(holorays, user)
 	SetLightsAndPower()
 	return TRUE
@@ -501,12 +501,10 @@ For the other part of the code, check silicon say.dm. Particularly robot talk.*/
 		return FALSE
 	return TRUE
 
-/**Can we display holos on the turf T
-  *Area check instead of line of sight check because this is a called a lot if AI wants to move around.
-  * *Areacheck for things that need to get into other areas, such as emergency holograms
-  */
-/obj/machinery/holopad/proc/validate_location(turf/T, check_los = FALSE, areacheck = TRUE)
-	if(T.virtual_z() == virtual_z() && get_dist(T, src) <= holo_range && (T.loc == get_area(src) || !areacheck) && anchored)
+//Can we display holos there
+//Area check instead of line of sight check because this is a called a lot if AI wants to move around.
+/obj/machinery/holopad/proc/validate_location(turf/T,check_los = FALSE)
+	if(T.virtual_z() == virtual_z() && get_dist(T, src) <= holo_range && T.loc == get_area(src))
 		return TRUE
 	else
 		return FALSE

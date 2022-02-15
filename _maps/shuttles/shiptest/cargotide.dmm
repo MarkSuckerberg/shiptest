@@ -1597,7 +1597,7 @@
 /obj/structure/chair/office{
 	dir = 1
 	},
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /turf/open/floor/plasteel,
 /area/ship/bridge)
 "Wa" = (

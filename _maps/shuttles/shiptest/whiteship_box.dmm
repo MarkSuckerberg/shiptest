@@ -780,7 +780,7 @@
 /area/ship/bridge)
 "ca" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /turf/open/floor/carpet/nanoweave/blue,
 /area/ship/bridge)
 "cb" = (
@@ -1865,7 +1865,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden{
 	dir = 4
 	},
-/obj/machinery/holopad/emergency/medical,
+/obj/machinery/holopad,
 /obj/structure/cable{
 	icon_state = "4-8"
 	},

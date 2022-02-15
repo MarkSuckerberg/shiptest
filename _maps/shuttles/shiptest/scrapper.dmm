@@ -746,7 +746,7 @@
 /turf/closed/wall/mineral/plastitanium,
 /area/ship/engineering/electrical)
 "iQ" = (
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 10
 	},

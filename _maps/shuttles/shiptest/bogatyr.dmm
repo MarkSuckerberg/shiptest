@@ -1176,7 +1176,7 @@
 /area/ship/science)
 "Nd" = (
 /obj/effect/decal/cleanable/dirt,
-/obj/machinery/holopad/emergency,
+/obj/machinery/holopad,
 /obj/structure/cable{
 	icon_state = "4-5"
 	},

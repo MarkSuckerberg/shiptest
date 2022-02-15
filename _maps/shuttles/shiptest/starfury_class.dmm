@@ -320,7 +320,7 @@
 /turf/open/floor/carpet/nanoweave/red,
 /area/ship/security)
 "dy" = (
-/obj/machinery/holopad/emergency/command,
+/obj/machinery/holopad,
 /obj/structure/chair/office{
 	dir = 1
 	},
@@ -3292,7 +3292,7 @@
 /obj/machinery/atmospherics/pipe/simple/supply/hidden/layer2{
 	dir = 4
 	},
-/obj/machinery/holopad/emergency/engineering,
+/obj/machinery/holopad,
 /turf/open/floor/engine,
 /area/ship/engineering)
 "DN" = (
