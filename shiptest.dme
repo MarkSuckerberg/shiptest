@@ -2633,6 +2633,7 @@
 #include "code\modules\overmap\_overmap_datum.dm"
 #include "code\modules\overmap\docking_ticket.dm"
 #include "code\modules\overmap\helm.dm"
+#include "code\modules\overmap\helm_docking.dm"
 #include "code\modules\overmap\overmap_token.dm"
 #include "code\modules\overmap\overmap_turf.dm"
 #include "code\modules\overmap\view_overmap_verb.dm"

@@ -217,7 +217,15 @@
 				if(SSshuttle.jump_mode > BS_JUMP_CALLED)
 					to_chat(usr, "<span class='warning'>Cannot dock due to bluespace jump preperations!</span>")
 					return
+
 				var/datum/overmap/to_act = locate(params["ship_to_act"]) in current_ship.get_nearby_overmap_objects()
+				if(istype(to_act, /datum/overmap/dynamic))
+					var/datum/overmap/dynamic/target = to_act
+					target.load_level()
+					var/datum/virtual_level/target_level = target.mapzone.virtual_levels[1]
+					give_eye_control(usr, target_level.get_center())
+					return
+
 				current_ship.Dock(to_act)
 				return
 			if("toggle_engine")
