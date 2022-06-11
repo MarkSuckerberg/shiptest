@@ -56,6 +56,7 @@
 	// BYOND will try to make it an ordered list. So, we have to use a string. This is annoying, but it's the only way to do it smoothly.
 	offset_clothing = list(
 		"[HEAD_LAYER]" = list("[NORTH]" = list("x" = 0, "y" = -4), "[EAST]" = list("x" = 4, "y" = -4), "[SOUTH]" = list("x" = 0, "y" = -4), "[WEST]" = list("x" =  -4, "y" = -4)),
+		"[EARS_LAYER]" = list("[NORTH]" = list("x" = 0, "y" = -4), "[EAST]" = list("x" = 4, "y" = -4), "[SOUTH]" = list("x" = 0, "y" = -4), "[WEST]" = list("x" =  -4, "y" = -4)),
 		"[GLASSES_LAYER]" = list("[NORTH]" = list("x" = 0, "y" = -4), "[EAST]" = list("x" = 4, "y" = -4), "[SOUTH]" = list("x" = 0, "y" = -4), "[WEST]" = list("x" =  -4, "y" = -4)),
 		"[FACEMASK_LAYER]" = list("[NORTH]" = list("x" = 0, "y" = -5), "[EAST]" = list("x" = 4, "y" = -5), "[SOUTH]" = list("x" = 0, "y" = -5), "[WEST]" = list("x" =  -4, "y" = -5))
 	)
