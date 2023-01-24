@@ -16,19 +16,18 @@
 	heavyfootstep = FOOTSTEP_WATER
 
 	var/datum/reagent/reagent_to_extract = /datum/reagent/water
-	var/extracted_reagent_visible_name = "water"
 
 /turf/open/water/attackby(obj/item/tool, mob/user, params)
 	if(!reagent_to_extract)
 		return ..()
 	var/obj/item/reagent_containers/glass/container = tool
-	if(!container)
+	if(!istype(container))
 		return ..()
 	if(container.reagents.total_volume >= container.volume)
 		to_chat(user, "<span class='danger'>[container] is full.</span>")
 		return
 	container.reagents.add_reagent(reagent_to_extract, rand(5, 10))
-	user.visible_message("<span class='notice'>[user] scoops [extracted_reagent_visible_name] from the [src] with \the [container].</span>", "<span class='notice'>You scoop out [extracted_reagent_visible_name] from the [src] using \the [container].</span>")
+	user.visible_message("<span class='notice'>[user] scoops [initial(reagent_to_extract.name)] from the [src] with \the [container].</span>", "<span class='notice'>You scoop out [initial(reagent_to_extract.name)] from the [src] using \the [container].</span>")
 	return TRUE
 
 /turf/open/water/can_have_cabling()
@@ -70,4 +69,3 @@
 	light_range = 0
 	slowdown = 2
 	reagent_to_extract = /datum/reagent/asphalt
-	extracted_reagent_visible_name = "tar"
