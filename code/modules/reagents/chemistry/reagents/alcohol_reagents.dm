@@ -1952,13 +1952,13 @@ All effects don't start immediately, but rather get worse over time; the rate is
 	var/list/primary_tastes = list()
 	var/list/secondary_tastes = list()
 	glass_name = "glass of [name]"
-	glass_desc = description
+	glass_desc = description/*
 	for(var/taste in tastes)
 		switch(tastes[taste])
 			if(minimum_percent*2 to INFINITY)
 				primary_tastes += taste
 			if(minimum_percent to minimum_percent*2)
-				secondary_tastes += taste
+				secondary_tastes += taste*/
 
 	var/minimum_name_percent = 0.35
 	name = ""

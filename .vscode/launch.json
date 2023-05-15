@@ -2,6 +2,13 @@
 	"version": "0.2.0",
 	"configurations": [
 		{
+			"type": "opendream",
+			"name": "Launch Opendream",
+			"request": "launch",
+			"preLaunchTask": "OpenDream: compile shiptest.dme",
+			"json_path": "shiptest.json"
+		},
+		{
 			"type": "byond",
 			"request": "launch",
 			"name": "Launch DreamSeeker",

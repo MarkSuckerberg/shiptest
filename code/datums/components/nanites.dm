@@ -247,7 +247,7 @@
 		var/datum/nanite_program/NP = X
 		NP.on_death(gibbed)
 
-/datum/component/nanites/proc/receive_signal(datum/source, code, source = "an unidentified source")
+/datum/component/nanites/proc/receive_signal(datum/source, code, comm_source = "an unidentified source")
 	SIGNAL_HANDLER
 
 	for(var/X in programs)

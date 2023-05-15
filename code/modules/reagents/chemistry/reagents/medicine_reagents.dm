@@ -88,8 +88,9 @@
 				mytray.mutateweed()
 			if(1 to 32)
 				mytray.mutatepest(user)
-			else if(prob(20))
-				mytray.visible_message("<span class='warning'>Nothing happens...</span>")
+			else
+				if(prob(20))
+					mytray.visible_message("<span class='warning'>Nothing happens...</span>")
 
 /datum/reagent/medicine/adminordrazine/quantum_heal
 	name = "Quantum Medicine"
@@ -176,13 +177,13 @@
 /datum/reagent/medicine/pyroxadone/on_mob_life(mob/living/carbon/M)
 	if(M.bodytemperature > M.dna.species.bodytemp_heat_damage_limit)
 		var/power = 0
-		switch(M.bodytemperature)
+		/*switch(M.bodytemperature)
 			if(M.dna.species.bodytemp_heat_damage_limit to 400)
 				power = 2
 			if(400 to 460)
 				power = 3
 			else
-				power = 5
+				power = 5*/
 		if(M.on_fire)
 			power *= 2
 
