@@ -125,6 +125,6 @@
 	if(charging.percent() >= 100)
 		return
 	use_power(charge_rate)
-	charging.give(charge_rate)	//this is 2558, efficient batteries exist
+	charging.give(charge_rate * GLOB.CELL)	//this is 2558, efficient batteries exist
 
 	update_appearance()

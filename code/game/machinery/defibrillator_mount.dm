@@ -187,8 +187,8 @@
 	if(!C || !is_operational)
 		return PROCESS_KILL
 	if(C.charge < C.maxcharge)
-		use_power(100)
-		C.give(80)
+		use_power(ACTIVE_DRAW_MINIMAL)
+		C.give(ACTIVE_DRAW_MINIMAL)
 		update_appearance()
 
 //wallframe, for attaching the mounts easily

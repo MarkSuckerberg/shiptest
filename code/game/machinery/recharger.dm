@@ -138,8 +138,9 @@
 		var/obj/item/stock_parts/cell/C = charging.get_cell()
 		if(C)
 			if(C.charge < C.maxcharge)
-				C.give(C.chargerate * recharge_coeff)
-				use_power(250 * recharge_coeff)
+				var/transfer = C.chargerate * recharge_coeff
+				use_power(transfer)
+				C.give(transfer)
 				using_power = TRUE
 			update_appearance()
 

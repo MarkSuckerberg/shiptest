@@ -21,7 +21,7 @@
 	grind_results = list(/datum/reagent/lithium = 15, /datum/reagent/iron = 5, /datum/reagent/silicon = 5)
 	var/rigged = FALSE	// true if rigged to
 	var/show_rigged = TRUE // whether if the cell shows it's fauly on examine.
-	var/chargerate = 100 //how much power is given every tick in a recharger
+	var/chargerate = 500 //how much power is given every tick in a recharger
 	var/self_recharge = 0 //does it self recharge, over time, or not?
 	var/ratingdesc = TRUE
 	var/grown_battery = FALSE // If it's a grown that acts as a battery, add a wire overlay to it.
