@@ -1290,13 +1290,54 @@ MAPPING_DIRECTIONAL_HELPERS(/obj/machinery/power/apc/auto_name, 25)
 	lastused_environ = area.power_usage[AREA_USAGE_ENVIRON] + area.power_usage[AREA_USAGE_STATIC_ENVIRON]
 	area.clear_usage()
 
-	lastused_total = lastused_light + lastused_equip + lastused_environ
-
 	//store states to update icon if any change
 	var/last_lt = lighting
 	var/last_eq = equipment
 	var/last_en = environ
 	var/last_ch = charging
+
+	if(isnull(terminal?.powernet))
+		equipment = APC_CHANNEL_OFF
+		lighting = APC_CHANNEL_OFF
+		environ = APC_CHANNEL_OFF
+	else
+		lastused_total = lastused_light + lastused_equip + lastused_environ
+		var/current_surplus = (terminal.powernet.avail - terminal.powernet.load) + lastused_total
+
+		if(lastused_total <= current_surplus)
+			equipment = APC_CHANNEL_ON
+			lighting = APC_CHANNEL_ON
+			environ = APC_CHANNEL_ON
+			charging = APC_FULLY_CHARGED
+			area.poweralert(1, src)
+			terminal.add_load(lastused_total)
+		else if(lastused_light + lastused_environ <= current_surplus)
+			equipment = APC_CHANNEL_OFF
+			lighting = APC_CHANNEL_ON
+			environ = APC_CHANNEL_ON
+			charging = APC_NOT_CHARGING
+			terminal.add_load(lastused_light + lastused_environ)
+			area.poweralert(0, src)
+		else if(lastused_environ <= current_surplus)
+			equipment = APC_CHANNEL_OFF
+			lighting = APC_CHANNEL_OFF
+			environ = APC_CHANNEL_ON
+			charging = APC_NOT_CHARGING
+			terminal.add_load(lastused_environ)
+			area.poweralert(0, src)
+		else
+			equipment = APC_CHANNEL_OFF
+			lighting = APC_CHANNEL_OFF
+			environ = APC_CHANNEL_OFF
+			charging = APC_NOT_CHARGING
+			area.poweralert(0, src)
+
+	if(last_lt != lighting || last_eq != equipment || last_en != environ || force_update)
+		force_update = 0
+		queue_icon_update()
+		update()
+
+	return
 
 	var/excess = surplus()
 
